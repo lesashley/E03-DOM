@@ -6,20 +6,26 @@
 </head>
 <body>
 	<font FACE="candara">
-		<form id="frm1" >
+		<form id="frm1" ALIGN = center>
+			<h1>Datos de formulario</h1>
 			<strong>Nombre: <input type="text" name="name" id="name"><br></br></strong>
 			<strong>Mail: <input type="text" name="email" id="email"><br></br></strong>
 		</form>
-		<button onclick="myFunction(); return false">Mostrar</button ALIGN = center>
-
+		<div style="text-align: center;">
+			<button onclick="myFunction(); return false">Mostrar</button ALIGN = center>
+		</div>
+		<div style="text-align: center;">
+			<h3 id="datos"></h3>
 			<p id="mostrarNombre"></p>
 			<p id="mostrarMail"></p>
+		</div>
 	</font>
 
 	<script>
 		function myFunction() {
 			var name = document.getElementById("name").value;
 			var email = document.getElementById("email").value;
+			document.getElementById("datos").innerHTML = "Datos ingresados";
 			document.getElementById("mostrarNombre").innerHTML = "El nombre ingresado es: "+"<br>" + name ;
 			document.getElementById("mostrarMail").innerHTML = "El email ingresado es: " + "<br>"+ email;
 		}
